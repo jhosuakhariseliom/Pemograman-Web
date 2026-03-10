@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal 3</title>
+  </head>
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+    </style>
+  <body>
+    <div
+      style="
+        border: 1px solid black;
+        border-top: 4px solid black;
+        border-bottom: 4px solid black;
+        width: 400px;
+        padding: 2px;
+        font-family: serif;
+      "
+    >
+      <form action="proses.html" method="get">
+        <table width="100%" cellpadding="4" cellspacing="0">
+          <tr>
+            <th
+              colspan="2"
+              style="
+                background-color: #999;
+                color: white;
+                text-align: center;
+                font-weight: normal;
+                border: 1px solid black;
+              "
+            >
+              Personal Data
+            </th>
+          </tr>
+          <tr>
+            <td width="30%">Nama</td>
+            <td><input type="text" name="nama" style="width: 150px" /></td>
+          </tr>
+          <tr>
+            <td valign="top">Alamat</td>
+            <td>
+              <textarea name="alamat" rows="3" style="width: 160px"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" style="padding-top: 8px">Jenis Kelamin</td>
+            <td>
+              <input type="radio" id="lk" name="jk" value="Laki-laki" />
+              <label for="lk">laki-laki</label><br />
+              <input type="radio" id="pr" name="jk" value="Perempuan" />
+              <label for="pr">perempuan</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Tanggal Lahir</td>
+            <td>
+              <select name="tgl">
+                <option>1</option>
+              </select>
+              -
+              <select name="bln">
+                <option>Januari</option>
+              </select>
+              -
+              <select name="thn">
+                <option>1980</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Jurusan</td>
+            <td>
+              <select
+                name="jurusan"
+                multiple="multiple"
+                size="4"
+                style="width: 130px; color: purple"
+              >
+                <option>teknik informatika</option>
+                <option>sistem informasi</option>
+                <option>elektro</option>
+                <option>sipil</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <fieldset style="border: 1px solid gray">
+                <legend>Hobi</legend>
+                <table width="100%">
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="hobi" value="Membaca" />
+                      Membaca
+                    </td>
+                    <td>
+                      <input type="checkbox" name="hobi" value="Voli" /> Voli
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="hobi" value="Menulis" />
+                      Menulis
+                    </td>
+                    <td>
+                      <input type="checkbox" name="hobi" value="Badminton" />
+                      Badminton
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="hobi" value="Catur" /> Catur
+                    </td>
+                    <td>
+                      <input type="checkbox" name="hobi" value="Golf" /> Golf
+                    </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </td>
+          </tr>
+          <tr>
+            <td
+              colspan="2"
+              style="
+                border-top: 1px solid black;
+                text-align: right;
+                padding-top: 5px;
+                margin-top: 5px;
+              "
+            >
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

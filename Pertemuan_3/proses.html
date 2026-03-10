@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proses</title>
+</head>
+<body>
+    <h2>Data yang Berhasil Diproses:</h2>
+    <ul id="tampil-data"></ul>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const listData = document.getElementById('tampil-data');
+
+        for (const [key, value] of params.entries()) {
+            const li = document.createElement('li');
+            // Menampilkan key (name dari input) dan value (isi input)
+            li.textContent = `${key} : ${value}`;
+            listData.appendChild(li);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+    
