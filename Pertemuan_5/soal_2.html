@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NRP-Nama - Soal 2</title>
+  <style>
+    body { font-family: Arial; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: #f0f0f0; }
+    .container { text-align: center; }
+    .circles {
+      position: relative;
+      width: 400px;
+      height: 200px;
+      margin: 50px auto;
+    }
+    .circle {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 8px solid;
+      background: transparent;
+    }
+    .circle1 {
+      border-color: red;
+      left: 0px;
+      top: 20px;
+      z-index: 3;
+    }
+    .circle2 {
+      border-color: blue;
+      left: 110px;
+      top: 20px;
+      z-index: 2;
+    }
+    .circle3 {
+      border-color: red;
+      left: 220px;
+      top: 20px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Soal 2 - CSS Position Absolute & Z-Index</h2>
+    <div class="circles">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+    </div>
+  </div>
+</body>
+</html>

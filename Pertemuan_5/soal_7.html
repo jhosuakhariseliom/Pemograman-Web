@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NRP-Nama - Soal 7</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    /* Total width: 120 + 340 + 160 = 620px */
+    #wrapper {
+      width: 620px;
+      margin: 0 auto;
+    }
+
+    /* Header row */
+    #header {
+      overflow: hidden;
+      width: 620px;
+    }
+
+    #header-logo {
+      float: left;
+      width: 120px;
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      box-sizing: border-box;
+    }
+
+    #header-logo .the-noho {
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    #header-logo .zoo {
+      font-size: 36px;
+      font-weight: bold;
+      color: white;
+      line-height: 1;
+    }
+
+    #header-title {
+      float: left;
+      width: 340px;
+      background: #f0c040;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #header-title h2 {
+      color: #4169E1;
+      font-size: 20px;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    #header-img {
+      float: left;
+      width: 160px;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    #header-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Subtitle */
+    #subtitle {
+      clear: both;
+      width: 620px;
+      padding: 5px 0 5px 120px;
+      box-sizing: border-box;
+    }
+
+    #subtitle h3 {
+      color: #4169E1;
+      text-align: center;
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    /* Main content area */
+    #main {
+      overflow: hidden;
+      width: 620px;
+    }
+
+    /* Left sidebar - 120px */
+    #sidebar {
+      float: left;
+      width: 120px;
+      box-sizing: border-box;
+    }
+
+    #sidebar-img {
+      width: 120px;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    #sidebar-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #sidebar nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #sidebar nav ul li a {
+      display: block;
+      color: #4169E1;
+      text-decoration: underline;
+      font-size: 13px;
+      padding: 2px 5px;
+    }
+
+    #sidebar nav ul li a:hover {
+      color: darkblue;
+    }
+
+    /* Content area - 340px */
+    #content {
+      float: left;
+      width: 340px;
+      padding: 5px;
+      box-sizing: border-box;
+      font-size: 12px;
+      text-align: justify;
+    }
+
+    #content p {
+      margin: 0 0 8px 0;
+    }
+
+    /* Right image - 160px */
+    #right-img {
+      float: left;
+      width: 160px;
+    }
+
+    #right-img img {
+      width: 150px;
+      height: 130px;
+      object-fit: cover;
+      display: block;
+    }
+
+    #right-img .caption {
+      font-size: 10px;
+      color: #555;
+      font-style: italic;
+      width: 150px;
+      background: #e8e8f0;
+      padding: 3px;
+      box-sizing: border-box;
+    }
+
+    /* Footer */
+    #footer {
+      clear: both;
+      text-align: center;
+      padding: 10px;
+      background: #e0e0e0;
+      font-size: 11px;
+      color: #555;
+      width: 620px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+
+    <!-- Header -->
+    <div id="header">
+      <div id="header-logo">
+        <div class="the-noho">The Noho</div>
+        <div class="zoo">ZOO</div>
+      </div>
+      <div id="header-title">
+        <h2>Having trouble putting<br>your little gorilla to bed</h2>
+      </div>
+      <div id="header-img">
+        <!-- Placeholder untuk gambar singa/kucing besar -->
+        <img src="https://via.placeholder.com/160x100/8B6914/white?text=Zoo+Animal" alt="Zoo Animal">
+      </div>
+    </div>
+
+    <!-- Subtitle -->
+    <div id="subtitle">
+      <h3>The Truth About Elephants</h3>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main">
+
+      <!-- Left Sidebar -->
+      <div id="sidebar">
+        <div id="sidebar-img">
+          <img src="https://via.placeholder.com/120x200/5588aa/white?text=Ocean" alt="Ocean">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Lions</a></li>
+            <li><a href="#">Armadillos</a></li>
+            <li><a href="#">Hyenas</a></li>
+            <li><a href="#">Elephants</a></li>
+            <li><a href="#">Giraffes</a></li>
+            <li><a href="#">Gorillas</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main Content Text -->
+      <div id="content">
+        <p>
+          it's hard to tell what goes through a baby elephant's mind when its mom is trying to put
+          it to sleep. Do you think baby elephants wake up in the middle of the night and cry? Do
+          their moms and dads take turns getting up with them to rock them back to sleep? How
+          do you rock an elephant, anyway?
+        </p>
+
+        <!-- Inline image right -->
+        <div id="right-img" style="float:right; margin-left:5px;">
+          <img src="https://via.placeholder.com/150x130/777799/white?text=Elephant" alt="Baby Elephant">
+          <div class="caption">A baby elephant hang out with it's mom, aunts and great aunts, and maybe even it's grandmother</div>
+        </div>
+
+        <p>
+          And what about gorillas? Today in the paper there's a story about a new gorilla that was
+          just born in Fraklin Park. Its mom is holding on to it just like any proud human mom.
+          And I have to wonder if they go through as much trauma as that human mom when it comes
+          to sleep, and food, and diapers, and running into the street.
+        </p>
+
+        <p>
+          Why is it so easy for them? Are they better parents? Do they just not worry about every
+          little detail? I've never known a gorilla to read and study carefully seventeen books on
+          bringing up baby gorillas. And they seem to know just what to do. They never worry about
+          spoling their little gorilla babies. They never worry about not having enough time with
+          them. Now, don't get me wrong, I'd rather be human than a gorilla any day. Just imagine
+          having to sit in a zoo. Forget discrete nursing... (Did you figure out yet that while gorillas
+          were on my mind, I could only find a picture of the elephant?)
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+      Copyright &copy; 2002 by Northampton Zoological Society, Inc.
+    </div>
+
+  </div>
+</body>
+</html>

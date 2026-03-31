@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NRP-Nama - Soal 4</title>
+  <style>
+    body { font-family: Arial; margin: 20px; background: #f0f0f0; }
+
+    ul.navbar {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 2px solid #AA0000;
+      display: inline-block;
+    }
+
+    ul.navbar li {
+      float: left;
+      /* Background image sesuai instruksi: background: url(nav_left.gif) top left no-repeat; */
+      /* Karena tidak ada file gif, kita gunakan border kiri sebagai pengganti */
+      border-left: 4px solid #AA0000;
+      border-right: 1px solid #ccc;
+      padding: 10px 20px;
+      min-width: 80px;
+    }
+
+    ul.navbar li:first-child {
+      border-left: none;
+    }
+
+    ul.navbar li a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+
+    ul.navbar li .num {
+      font-size: 22px;
+      font-weight: bold;
+      display: block;
+    }
+
+    ul.navbar li .label {
+      font-size: 11px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>Soal 4 - Navigation Bar dengan List</h2>
+
+  <ul class="navbar">
+    <li>
+      <a href="#">
+        <span class="num">01</span>
+        <span class="label">ABOUT SHOP</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="num">02</span>
+        <span class="label">GALLERY</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="num">03</span>
+        <span class="label">FREE MUSIC</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="num">04</span>
+        <span class="label">ARTIST</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="num">05</span>
+        <span class="label">CONTACTS</span>
+      </a>
+    </li>
+  </ul>
+
+  <p style="color:#AA0000; margin-top:20px;">Warna border: #AA0000</p>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NRP-Nama - Soal 5</title>
+  <style>
+    body { font-family: Arial; margin: 0; background: #f0f0f0; }
+
+    /* Reset */
+    ul { list-style: none; margin: 0; padding: 0; }
+
+    /* Main nav */
+    nav > ul {
+      display: flex;
+      border-style: dotted;
+      border-color: grey;
+      border-width: 2px;
+      width: fit-content;
+    }
+
+    nav > ul > li {
+      position: relative;
+      border-right-style: dotted;
+      border-right-color: grey;
+      border-right-width: 2px;
+    }
+
+    nav > ul > li:last-child {
+      border-right: none;
+    }
+
+    nav > ul > li > a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      border-style: dotted;
+      border-color: grey;
+      border-width: 1px;
+    }
+
+    nav > ul > li > a:hover {
+      background-color: black;
+      color: white;
+    }
+
+    /* Submenu */
+    nav > ul > li > ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      width: 120px;
+      z-index: 10;
+    }
+
+    nav > ul > li:hover > ul {
+      display: block;
+    }
+
+    nav > ul > li > ul > li {
+      margin-bottom: 3px;
+      border-style: dotted;
+      border-color: grey;
+      border-width: 1px;
+    }
+
+    nav > ul > li > ul > li > a {
+      display: block;
+      padding: 8px 14px;
+      text-decoration: none;
+      color: black;
+    }
+
+    nav > ul > li > ul > li > a:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="margin: 20px;">Soal 5 - Navigation Bar dengan Dropdown</h2>
+  <div style="margin: 20px;">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">News</a>
+          <ul>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Movie</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <p style="color:#555; margin-top:15px;">Hover pada "News" untuk melihat sub menu: Sports, Music, Movie</p>
+  </div>
+</body>
+</html>
