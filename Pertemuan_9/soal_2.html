@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <style>
+        .underline{
+            text-decoration:underline;
+        }
+
+        div{
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" id="nama">
+<button id="add">Add</button>
+
+<input type="text" id="search">
+<button id="cari">Search</button>
+
+<hr>
+
+<div class="data">Andi</div>
+<div class="data">Budi</div>
+<div class="data">Charlie</div>
+
+<script>
+$(document).ready(function(){
+
+    $("#add").click(function(){
+
+        let nama = $("#nama").val();
+
+        $("<div class='data'>" + nama + "</div>").appendTo("body");
+
+        $("#nama").val("");
+    });
+
+    $("#cari").click(function(){
+
+        $(".data").css("text-decoration","none");
+
+        let cari = $("#search").val();
+
+        $(".data:contains('" + cari + "')").css("text-decoration","underline");
+    });
+
+});
+</script>
+
+</body>
+</html>

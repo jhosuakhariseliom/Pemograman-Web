@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+        <td width="50" align="center">
+
+            <input class="header" type="checkbox"/><br/>
+            <hr/>
+
+            <input class="body" type="checkbox"/><br/>
+            <input class="body" type="checkbox"/><br/>
+            <input class="body" type="checkbox"/><br/>
+            <input class="body" type="checkbox"/><br/>
+
+        </td>
+    </tr>
+</table>
+
+<script>
+$(document).ready(function(){
+
+    $(".header").click(function(){
+
+        var flag = $(this).prop("checked");
+
+        if(flag){
+            $("input:checkbox.body").prop("checked", true);
+        }
+        else{
+            $("input:checkbox.body").prop("checked", false);
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>

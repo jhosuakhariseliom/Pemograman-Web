@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <style>
+        ol{
+            list-style-type:none;
+            padding:0;
+        }
+
+        li{
+            background:#dddddd;
+            width:200px;
+            padding:10px;
+            margin:2px;
+            position:relative;
+        }
+
+        li ol{
+            display:none;
+            margin-top:10px;
+        }
+
+        li ol li{
+            background:#bbbbbb;
+        }
+    </style>
+</head>
+<body>
+
+<ol>
+    <li>
+        jQuery
+        <ol>
+            <li>Download</li>
+            <li>Documentation</li>
+            <li>Plugins</li>
+        </ol>
+    </li>
+
+    <li>
+        Community
+        <ol>
+            <li>Forum</li>
+            <li>Blog</li>
+            <li>Events</li>
+        </ol>
+    </li>
+
+    <li>
+        Development
+        <ol>
+            <li>Source Code</li>
+            <li>Bug Tracker</li>
+            <li>API</li>
+        </ol>
+    </li>
+</ol>
+
+<script>
+$(document).ready(function(){
+
+    $("li ol").hide();
+
+    $("li").hover(
+        function(){
+            $(this).children("ol").show();
+        },
+        function(){
+            $(this).children("ol").hide();
+        }
+    );
+
+});
+</script>
+
+</body>
+</html>

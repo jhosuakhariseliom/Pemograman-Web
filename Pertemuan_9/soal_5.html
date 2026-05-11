@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <style>
+        .red{
+            color:red;
+        }
+
+        div{
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Find Company</h3>
+
+<input type="text" id="find">
+
+<hr>
+
+<div class="company">Microsoft</div>
+<div class="company">Google</div>
+<div class="company">Apple</div>
+<div class="company">Oracle</div>
+<div class="company">IBM</div>
+<div class="company">Intel</div>
+
+<script>
+$(document).ready(function(){
+
+    $("#find").keyup(function(){
+
+        $(".company").removeClass("red");
+
+        let text = $(this).val();
+
+        $(".company:contains('" + text + "')").addClass("red");
+
+    });
+
+});
+</script>
+
+</body>
+</html>
