@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+</head>
+<body>
+    <h2>Pyramid</h2>
+
+    <input type="number" id="tinggi" placeholder="Masukkan tinggi piramida">
+    <button onclick="buatPiramida()">Buat</button>
+
+    <br><br>
+
+    <table id="piramida" border="0" width="800" height="600"></table>
+
+    <script>
+        function buatPiramida() {
+            let tinggi = parseInt(document.getElementById("tinggi").value);
+            let output = "";
+
+            for (let i = 1; i <= tinggi; i++) {
+                output += "<tr>";
+
+                for (let j = 1; j <= tinggi - i; j++) {
+                    output += "<td></td>";
+                }
+
+                for (let k = 1; k <= (2 * i - 1); k++) {
+                    output += "<td bgcolor='blue'></td>";
+                }
+
+                output += "</tr>";
+            }
+
+            document.getElementById("piramida").innerHTML = output;
+        }
+    </script>
+</body>
+</html>

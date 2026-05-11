@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+</head>
+<body>
+    <h2>Tabel Perkalian</h2>
+
+    <table border="1" cellpadding="10" id="tabel"></table>
+
+    <script>
+        let angka;
+
+        do {
+            angka = prompt("Masukkan angka:");
+        } while (angka === "" || isNaN(angka));
+
+        angka = parseInt(angka);
+
+        let hasil = "";
+
+        for (let i = 1; i <= angka; i++) {
+            hasil += "<tr>";
+            hasil += "<td>" + angka + "</td>";
+            hasil += "<td>x</td>";
+            hasil += "<td>" + i + "</td>";
+            hasil += "<td>=</td>";
+            hasil += "<td>" + (angka * i) + "</td>";
+            hasil += "</tr>";
+        }
+
+        document.getElementById("tabel").innerHTML = hasil;
+    </script>
+</body>
+</html>

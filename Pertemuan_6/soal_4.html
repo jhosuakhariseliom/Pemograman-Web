@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+</head>
+<body>
+    <h2>Number Conversion</h2>
+
+    <h3>Decimal ke Biner</h3>
+    <input type="text" id="decimal">
+    <button onclick="decimalKeBiner()">Convert</button>
+    <p id="hasilBiner"></p>
+
+    <h3>Biner ke Decimal</h3>
+    <input type="text" id="biner">
+    <button onclick="binerKeDecimal()">Convert</button>
+    <p id="hasilDecimal"></p>
+
+    <script>
+        function decimalKeBiner() {
+            let angka = parseInt(document.getElementById("decimal").value);
+
+            if (isNaN(angka) || angka < 0 || angka > 255) {
+                alert("Input decimal harus angka 0 - 255");
+                return;
+            }
+
+            let hasil = "";
+            let nilai = angka;
+
+            if (nilai == 0) {
+                hasil = "0";
+            } else {
+                while (nilai > 0) {
+                    hasil = (nilai % 2) + hasil;
+                    nilai = Math.floor(nilai / 2);
+                }
+            }
+
+            document.getElementById("hasilBiner").innerHTML = "Hasil: " + hasil;
+        }
+
+        function binerKeDecimal() {
+            let biner = document.getElementById("biner").value;
+
+            if (biner.length != 8) {
+                alert("Input biner harus 8 digit");
+                return;
+            }
+
+            for (let i = 0; i < biner.length; i++) {
+                if (biner[i] != "0" && biner[i] != "1") {
+                    alert("Input hanya boleh 0 atau 1");
+                    return;
+                }
+            }
+
+            let hasil = 0;
+            let pangkat = 0;
+
+            for (let i = biner.length - 1; i >= 0; i--) {
+                hasil += parseInt(biner[i]) * Math.pow(2, pangkat);
+                pangkat++;
+            }
+
+            document.getElementById("hasilDecimal").innerHTML = "Hasil: " + hasil;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+</head>
+<body>
+    <h2>Aritmatic</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Angka Pertama</td>
+            <td><input type="text" id="angka1"></td>
+        </tr>
+        <tr>
+            <td>Angka Kedua</td>
+            <td><input type="text" id="angka2"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="hitung()">Count</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Hasil Penjumlahan</td>
+            <td id="jumlah"></td>
+        </tr>
+        <tr>
+            <td>Hasil Pengurangan</td>
+            <td id="kurang"></td>
+        </tr>
+    </table>
+
+    <script>
+        function hitung() {
+            let x = document.getElementById("angka1").value;
+            let y = document.getElementById("angka2").value;
+
+            let a = parseInt(x);
+            let b = parseInt(y);
+
+            let cek1 = isNaN(a);
+            let cek2 = isNaN(b);
+
+            if (cek1 && cek2) {
+                alert("angka pertama dan kedua harus angka");
+            } else if (cek1) {
+                alert("angka pertama bukan angka");
+            } else if (cek2) {
+                alert("angka kedua harus angka");
+            } else {
+                document.getElementById("jumlah").innerHTML = a + b;
+                document.getElementById("kurang").innerHTML = a - b;
+            }
+        }
+    </script>
+</body>
+</html>
