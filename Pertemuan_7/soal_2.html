@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 400px;
+        }
+
+        td, th{
+            border:1px solid black;
+            padding:10px;
+        }
+
+        .normal{
+            background-color:white;
+        }
+
+        .hover{
+            background-color:#CCFFAA;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Highlighted Table</h2>
+
+<table>
+    <tr class="normal" onmouseover="ubah(this)" onmouseout="kembali(this)">
+        <td>John</td>
+        <td>20</td>
+    </tr>
+
+    <tr class="normal" onmouseover="ubah(this)" onmouseout="kembali(this)">
+        <td>Michael</td>
+        <td>25</td>
+    </tr>
+
+    <tr class="normal" onmouseover="ubah(this)" onmouseout="kembali(this)">
+        <td>Sarah</td>
+        <td>22</td>
+    </tr>
+
+    <tr class="normal" onmouseover="ubah(this)" onmouseout="kembali(this)">
+        <td>Jessica</td>
+        <td>24</td>
+    </tr>
+</table>
+
+<script>
+function ubah(baris){
+    baris.className = "hover";
+}
+
+function kembali(baris){
+    baris.className = "normal";
+}
+</script>
+
+</body>
+</html>

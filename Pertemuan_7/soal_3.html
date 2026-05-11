@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NRP-Nama</title>
+</head>
+<body>
+
+<h2>Array Function</h2>
+
+<input type="text" id="data">
+<button onclick="tambahData()">Add</button>
+
+<br><br>
+
+<select onchange="proses(this.value)">
+    <option value="">-- Pilih Menu --</option>
+    <option value="display">Display</option>
+    <option value="count">Count</option>
+    <option value="sum">Sum</option>
+    <option value="average">Average</option>
+    <option value="max">Max</option>
+    <option value="min">Min</option>
+    <option value="ganjil">Ganjil</option>
+    <option value="genap">Genap</option>
+    <option value="hapus">Hapus</option>
+</select>
+
+<p id="hasil"></p>
+
+<script>
+let arr = [];
+
+function tambahData(){
+    let nilai = document.getElementById("data").value;
+
+    if(nilai == "" || isNaN(nilai)){
+        alert("Input harus angka");
+        return;
+    }
+
+    arr.push(parseInt(nilai));
+
+    document.getElementById("data").value = "";
+}
+
+function proses(menu){
+    let hasil = "";
+
+    if(menu == "display"){
+        hasil = arr.join(", ");
+    }
+
+    else if(menu == "count"){
+        hasil = arr.length;
+    }
+
+    else if(menu == "sum"){
+        let total = 0;
+
+        for(let i=0;i<arr.length;i++){
+            total += arr[i];
+        }
+
+        hasil = total;
+    }
+
+    else if(menu == "average"){
+        let total = 0;
+
+        for(let i=0;i<arr.length;i++){
+            total += arr[i];
+        }
+
+        hasil = total / arr.length;
+    }
+
+    else if(menu == "max"){
+        hasil = Math.max(...arr);
+    }
+
+    else if(menu == "min"){
+        hasil = Math.min(...arr);
+    }
+
+    else if(menu == "ganjil"){
+        let ganjil = [];
+
+        for(let i=0;i<arr.length;i++){
+            if(arr[i] % 2 != 0){
+                ganjil.push(arr[i]);
+            }
+        }
+
+        hasil = ganjil.join(", ");
+    }
+
+    else if(menu == "genap"){
+        let genap = [];
+
+        for(let i=0;i<arr.length;i++){
+            if(arr[i] % 2 == 0){
+                genap.push(arr[i]);
+            }
+        }
+
+        hasil = genap.join(", ");
+    }
+
+    else if(menu == "hapus"){
+        arr = [];
+        hasil = "Semua data dihapus";
+    }
+
+    document.getElementById("hasil").innerHTML = hasil;
+}
+</script>
+
+</body>
+</html>
