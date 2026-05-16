@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NRP-Nama</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 16px;
+      }
+      a {
+        color: blue;
+        text-decoration: underline;
+      }
+      #boxUtama {
+        border: 1px solid black;
+        width: 800px;
+        padding: 5px;
+      }
+      .box-awal {
+        border: 1px solid gray;
+        padding: 3px;
+        margin-bottom: 3px;
+      }
+      .box-awal:last-child {
+        margin-bottom: 0;
+      }
+      .header-portal {
+        text-align: center;
+        border-bottom: 1px solid black;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+      .header-portal h2 {
+        margin: 5px 0;
+        font-size: 26px;
+        font-weight: bold;
+      }
+      .item-desc {
+        text-align: justify;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .footer-box {
+        border: 1px solid black;
+        padding: 3px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boxUtama">
+      <div id="tampilanAwal">
+        <div class="box-awal">Title</div>
+        <div class="box-awal">Content</div>
+        <div class="box-awal">Generator</div>
+      </div>
+
+      <div id="hasil" style="display: none"></div>
+    </div>
+    <br />
+    <button id="lookBtn">Look</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#lookBtn").click(function () {
+          $.ajax({
+            url: "SIJson.txt",
+            dataType: "text",
+            success: function (response) {
+              // Menghapus semicolon (;) di akhir file JSON
+              let cleanText = response.trim();
+              if (cleanText.endsWith(";")) cleanText = cleanText.slice(0, -1);
+
+              let data = JSON.parse(cleanText);
+              let html = "";
+
+              // Bagian Judul Portal & Garis
+              html += `<div class="header-portal">`;
+              html += `<h2><a href="${data.link}">${data.title}</a></h2>`;
+              html += `</div>`;
+
+              // Looping Data Konten
+              $.each(data.items, function (i, item) {
+                html += `<div>`;
+                html += `<a href="${item.link}" style="font-size: 18px;">${item.title}</a><br>`;
+                html += `By : ${item.author} / <i>${item.published}</i><br>`;
+                html += `<div class="item-desc">${item.description}</div>`;
+                html += `Universitas : <a href="${item.universitas.m}">Click Here</a><br>`;
+                html += `Tag(s) : ${item.tags}<br><br>`;
+                html += `</div>`;
+              });
+
+              // Bagian Footer (Generator)
+              html += `<div class="footer-box">&copy;${data.generator}</div>`;
+
+              // Sembunyikan tampilan awal dan tampilkan hasil
+              $("#tampilanAwal").hide();
+              $("#hasil").html(html).show();
+            },
+            error: function () {
+              alert("Gagal membaca file SIJson.txt");
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
